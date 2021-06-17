@@ -1,2 +1,17 @@
-// Anything exported from this file is importable by other in-browser modules.
-export function publicApiFunction() {}
+const routes = [
+  {
+    label: "Home",
+    url: "/",
+  },
+  {
+    label: "Login",
+    url: "/login",
+  },
+  {
+    label: "Protected route",
+    url: "/protected",
+    subroutes: [{ label: "Subroute", url: "/subroute" }],
+  },
+];
+
+export default routes;
